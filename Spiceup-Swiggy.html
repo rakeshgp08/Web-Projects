@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.bg-image-home {
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/foodbg.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.bg-card-home {
+    padding: 15px;
+    padding-left: 30px;
+    background-color: orange;
+    height: 30vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bg-card-head-home {
+    font-family: "Bree Serif";
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.bg-card-para-home {
+    font-family: "Roboto";
+    font-size: 19px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+.bg-button-home {
+    background-color: white;
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: bold;
+    transition:color 0.5s,background-color 0.5s,width 0.5s, height 0.5s, box-shadow 0.25s;
+}
+
+.bg-button-home:hover{
+    color:white;
+    background-color:black;
+    width: 150px;
+    height: 50px;
+}
+.bg-button-home:active{
+    box-shadow:5px 5px 10px rgb(0,0,0,0.6);
+    
+}
+.detail-bg {
+    background-color: orange;
+    height: 15vh;
+    font-family: "Bree Serif";
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+}
+
+.bg-detail{
+    text-align: right;
+
+}
+
+.detail-offer-button {
+    margin-left: 20px;
+    color: white;
+}
+
+.detail-text {
+    text-align: center;
+}
+
+.detail-image {
+    margin-top: 25px;
+    margin-left: 15px;
+    height: 110px;
+    width: 170px;
+    border-radius: 18px;
+    font-family: "Roboto";
+    margin-right: 20px;
+    cursor:pointer;
+    transition:box-shadow 0.5s, height 0.5s, width 0.5s;
+}
+.detail-image:hover{
+    box-shadow:5px 5px 10px rgb(0,0,0,0.6);
+    height:121px;
+    width:187px;
+}
+
+.detail-font {
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.back {
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    width: 70px;
+    height:40px;
+    transition:color 0.5s, opacity 0.5s, width 0.5s, height 0.5s, box-shadow 0.6s;
+}
+.back:hover{
+    opacity:0.8;
+    color:white;
+    width:84px;
+    height:54px;
+}
+
+.back:active{
+    box-shadow:5px 5px 10px rgb(0,0,0,0.6);
+}
+
+.back-align {
+
+    margin-top: 50px;
+}
+
+.navigate-image {
+    height: 38px;
+    width: 38px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 25px;
+}
+
+.food-top {
+    background-color: orange;
+    height: 13vh;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-bottom: 25px;
+
+}
+
+.back-image {
+    height: 40px;
+    width: 40px;
+    margin-top: 19px;
+    margin-left: 15px;
+    border-radius: 25px;
+    cursor:pointer;
+    transition: box-shadow 0.5s, height 0.5s, width 0.5s;
+}
+ 
+.back-image:hover{
+    box-shadow:5px 5px 10px rgb(0,0,0,0.6);
+    height:44px;
+    width:44px;
+}
+
+.font-style-food {
+    font-family: "Bree Serif";
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.card {
+    background-color: white;
+    height: 22vh;
+    margin: 10px;
+    border-color: #a1a1a1;
+    border-width: 1.5px;
+    border-radius: 20px;
+    cursor:pointer;
+
+
+}
+
+
+.rest-image {
+    height: 110px;
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 14px;
+    transition:height 0.5s, width 0.5s;
+
+}
+.rest-image:hover{
+    height:121px;
+    width:132px;
+}
+
+.rest-font {
+    margin-top: 10px;
+    margin-left: 63px;
+    font-family: "Arial";
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.rest-rating {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    margin-left: 60px;
+}
+
+.rest-rating-font {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.rest-food-type-font {
+    color: #808080;
+    font-family: "Roboto";
+    font-size: 14px;
+    margin-left: 65px;
+}
+</style>
+<body>
+    <div id="sectionhome">
+        <div class="bg-image-home d-flex flex-column justify-content-end">
+            <div class="bg-card-home">
+                <h1 class="bg-card-head-home">Spiceup</h1>
+                <p class="bg-card-para-home">Discover the best foods over the 1000 restaurants</p>
+                <button class="btn bg-button-home" onclick="display('sectiondetail')">Book Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="sectiondetail">
+        <div class="detail-bg">
+            <h>Spiceup</h>
+            <button class="btn detail-offer-button">Get started with 20% off</button>
+        </div>
+        <div class="bg-detail d-flex flex-column justify-content-end">
+            <div class="d-flex flex-row">
+                <div onclick="display('sectionfood')">
+                    <img src="https://play-lh.googleusercontent.com/p84o4Mj67L8IwaW9qcnCWiNnR5SWSvkNjnBYicDVZAffk6CaoiMtTG38B3YxaAH7H_Q=w2560-h1440-rw" class="detail-image" />
+                    <h1 class="detail-font detail-text">Food</h1>
+                </div>
+                <div>
+                    <img src="https://www.analyticssteps.com/backend/media/thumbnail/4754531/1573508_1605247363_dineout.jpg" class="detail-image" />
+                    <h1 class="detail-font detail-text">Dine-out</h1>
+                </div>
+
+            </div>
+
+            <div class="d-flex flex-row">
+                <div>
+                    <img src="https://www.netsolutions.com/insights/wp-content/uploads/2021/10/Online-Food-Delivery-Apps.png.webp" class="detail-image" />
+                    <h1 class="detail-font detail-text">Genie</h1>
+                </div>
+                <div>
+                    <img src="https://blog.grabon.in/wp-content/uploads/2021/07/Online-Grocery-Stores-in-india.jpg" class="detail-image" />
+                    <h1 class="detail-font detail-text">Groceries</h1>
+                </div>
+
+            </div>
+            <div class="detail-text">
+                <img src="https://cdn.dribbble.com/users/77121/screenshots/10491669/media/2b811c71c98dffce88dccf7f489713be.gif" class="detail-image" />
+                <h1 class="detail-font detail-text">Customer Care</h1>
+            </div>
+            <div class="detail-text back-align">
+                <button class="btn back" onclick="display('sectionhome')">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionfood">
+
+        <div class="food-top d-flex flex-row">
+            <div class="d-flex flex-row">
+                <img src="https://as2.ftcdn.net/v2/jpg/03/16/86/33/1000_F_316863365_ek2aPHXe5XEVDCKG595RntMH7olPVJK0.jpg" class="back-image" onclick="display('sectiondetail')" />
+                <img src="https://w7.pngwing.com/pngs/249/952/png-transparent-orange-and-white-location-icon-map-computer-icons-location-logo-text-orange-pin-thumbnail.png" class="navigate-image" />
+            </div>
+            <div>
+                <h1 class="font-style-food">Chennai, Tamil Nadu</h1>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="card d-flex flex-row">
+            <img src="https://jobs.dominos.com/images/logo.png" class="rest-image" />
+            <div>
+                <h1 class="rest-font"><a href="https://www.dominos.co.in/" target="_blank">Dominos</a></h1>
+                <div class="d-flex flex-row">
+                    <img src="https://www.iconsdb.com/images/ico_rating.png" class="rest-rating" />
+                    <p class="rest-rating-font">4.5 (5k+) · 32 mins</p>
+                </div>
+                <p class="rest-food-type-font">Pizza, Desserts</p>
+                <p class="rest-food-type-font">Avadi · 1.5km </p>
+
+            </div>
+        </div>
+
+        <div class="card d-flex flex-row">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/57/KFC_logo-image.svg" class="rest-image" />
+            <div>
+                <h1 class="rest-font">KFC</h1>
+                <div class="d-flex flex-row">
+                    <img src="https://www.iconsdb.com/images/ico_rating.png" class="rest-rating" />
+                    <p class="rest-rating-font">4.8 (8k+) · 30 mins</p>
+                </div>
+                <p class="rest-food-type-font">Chicken</p>
+                <p class="rest-food-type-font">NM Road · 1.8km </p>
+
+            </div>
+        </div>
+
+        <div class="card d-flex flex-row">
+            <img src="https://yt3.googleusercontent.com/ytc/AOPolaSOjYJxRcqYR-opWB-9zyTqS-KY3BlDj0gO1bCe2w=s176-c-k-c0x00ffffff-no-rj" class="rest-image" />
+            <div>
+                <h1 class="rest-font">McDonalds</h1>
+                <div class="d-flex flex-row">
+                    <img src="https://www.iconsdb.com/images/ico_rating.png" class="rest-rating" />
+                    <p class="rest-rating-font">4.2 (6k+) · 29 mins</p>
+                </div>
+                <p class="rest-food-type-font">Fast Food</p>
+                <p class="rest-food-type-font">MTH Road · 2km </p>
+
+            </div>
+        </div>
+
+        <div class="card d-flex flex-row">
+            <img src="https://play-lh.googleusercontent.com/eMn62vKOeepfYuFOpDWfLOOvjWK2ds8Wk-7Yu6qhIwAUBlgx3px8KDCiFnAIbMz7foc=w240-h480-rw" class="rest-image" />
+            <div>
+                <h1 class="rest-font">Pizza Hut</h1>
+                <div class="d-flex flex-row">
+                    <img src="https://www.iconsdb.com/images/ico_rating.png" class="rest-rating" />
+                    <p class="rest-rating-font">4.1 (4k+) · 25 mins</p>
+                </div>
+                <p class="rest-food-type-font">Pizza, Desserts</p>
+                <p class="rest-food-type-font">NM Road · 1.8km </p>
+
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+
+    
+</body>
+
+</html>
